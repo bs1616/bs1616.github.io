@@ -1,0 +1,23 @@
+#app {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  display: grid;
+  z-index: 1;
+  background-color: rgba(0,0,0,0);
+}
+#appbg {
+  z-index: -1;
+}
+.content {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+#header {
+  background-color: rgba(0,0,0,0.8);
+  color: white
+}
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
