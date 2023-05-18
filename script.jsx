@@ -6,25 +6,51 @@ function Background() {
   )
 }
 
+function InDivScore(score) {
+  return (
+    <div key={score.id}>
+      <p><b>{score.year}</b> - {score.score}</p>
+    </div>
+  )
+}
+
 function Score(score) {
-  return <div key={score.name}>
-    <p><b>{score.name}</b> - {score.score}</p>
+  return <div key={score.name} id={score.name} className="card">
+    <h2>{score.name}</h2>
+    {
+      score.scores.map(InDivScore)
+    }
   </div>
 }
 
 function Competition() {
   const [scores, setScores] = React.useState([
     {
-      name: "AMC 10",
-      score: "84"
-    }
+      name: "AMC-10",
+      scores: [
+        {
+          id: "key1",
+          year: "2022",
+          score: "84"
+        }
+      ]
+    },
+    {
+      name: "MATHCOUNTS",
+      scores: [
+        {
+          id: "key2",
+          year: "2023 STATE",
+          score: "30"
+        }
+      ]
+    },
   ])
   return (
-    <div>
+    <div id="card-container">
       {
         scores.map(Score)
       }
-          
     </div>
   )
 }
@@ -40,7 +66,7 @@ function Acad() {
 function App() {
   return (
     <div>
-      <div id="header">
+      <div id="header" className="content">
         <h1>This is Me</h1>
       </div>
       <div id="bg" className="content">
