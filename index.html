@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Homework scheduler</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h1>Homework Planner</h1>
+  <p>This is an app meant to help with time management, which combats procrastination. This helps reduce stress because after you have done your assignments, you will not have to stress over them. It changes your "flight" or "freeze" response to a "fight" response, which has you get your work done. Use this every day after school to plan the rest of your day.</p>
+  <h3>Instructions:</h3>
+  <p>
+    <b>DISCLAIMER: If still feeling overwhelmed, see a counselor or a trusted adult.</b>
+  </p>
+  <ol>
+    
+  </ol>
+  <div id="app">
+    <form id="submitonce">
+      <label for="home">What time do you get home: </label>
+      <input type="time" name="home" id="home">
+      <input type="submit">
+    </form>
+    <div id="assignment-enter">
+      <h3>
+        Enter an assignment:
+      </h3>
+      <form id="assign-enter">
+        <ul>
+          <li><label for="name">Name of Assignment: </label>
+            <input type="text" name="name" id="name"></li>
+          <li><label for="minutes">Estimated time needed (minutes): </label><input type="number" name="minutes" id="minutes"></li>
+          <li><label for="importance">Urgency: (10 is most urgent): </label><input type="number" name="importance" id="importance" min="0" max="10"></li>
+          <li><input type="submit"></li>
+        </ul>
+      </form>
+    </div>
+    <div id="static-enter">
+      <h3>
+        Enter an event:
+      </h3>
+      <form id="static-enter2">
+        <ul>
+          <li><label for="name2">Name of event: </label><input type="text" name="name2" id="name2"></li>
+          <li><label for="starttime">Start Time: </label><input type="time" name="starttime" id="starttime"></li>
+          <li><label for="endtime">End Time: </label><input type="time" name="endtime" id="endtime"></li>
+          <li><input type="submit"></li>
+        </ul>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
